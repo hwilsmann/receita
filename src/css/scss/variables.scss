@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+@mixin media($point) {
+  @if $point == 'xs-sm' {
+    @media (max-width: 767px) and (min-width: 426px) { @content; }
+  }
+  @else if $point == 'sm' {
+    @media (min-width: 768px) { @content; }
+  }
+  @else if $point == 'md' {
+    @media (min-width: 992px) { @content; }
+  }
+  @else if $point == 'sm-md' {
+    @media (min-width: 768px) and (max-width: 991px) { @content; }
+  }
+  @else if $point == 'sm-lg' {
+    @media (min-width: 768px) and (max-width: 1199px) { @content; }
+  }
+  @else if $point == 'lg' {
+    @media (min-width: 1200px) { @content; }
+  }
+  @else if $point == 'xs' {
+    @media (max-width: 767px) { @content; }
+  }
+  @else if $point == 'xxs' {
+    @media (max-width: 425px) { @content; }
+  }
+  @else if $point == 'xlg' {
+    @media (min-width: 1440px) { @content; }
+  }
+}
+
+$black: #000;
+$white: #fff;
+
+$blue: #023141;
+$orange: #ff6600;
+
+$light_gray: #f5f5f5;
+$lighten_gray: #fbfbfb;
+$medium_gray: #c9c9c9;
+$dark_gray: #949494;
+
+$font-primary: 'Roboto', sans-serif;
+
+$shadow: 0 3px 10px rgba($black, .15);
+$radius: 10px;
+$transition: .35s;

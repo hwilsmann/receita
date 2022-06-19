@@ -1,0 +1,257 @@
+@import 'variables';
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+
+	&:focus{
+		outline: none;
+	}
+}
+
+::-webkit-input-placeholder {
+	color: $medium_gray;
+	opacity: 1;
+	transition: opacity $transition;
+}
+::-moz-placeholder {
+	color: $medium_gray;
+	opacity: 1;
+	transition: opacity $transition;
+}
+:-ms-input-placeholder {
+	color: $medium_gray;
+	opacity: 1;
+	transition: opacity $transition;
+}
+:-moz-placeholder {
+	color: $medium_gray;
+	opacity: 1;
+	transition: opacity $transition;
+}
+
+html,
+body {
+	color: $blue;
+	font-family: $font-primary;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 1.5;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	@include media("xs") {
+		font-size: 12px;
+	}
+}
+
+a {
+	color: inherit;
+}
+
+b,
+strong {
+	font-weight: 700;
+}
+
+button {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 600;
+}
+
+h3 {
+	font-size: 20px;
+
+	@include media("xs") {
+		font-size: 16px;
+	}
+}
+
+img {
+	display: block;
+	max-width: 100%;
+
+	&.--radius {
+		border-radius: $radius;
+	}
+}
+
+input {
+	background-color: $white;
+	border: 1px solid $medium_gray;
+	border-radius: $radius;
+	font:inherit;
+	font-size: 16px;
+	height: 50px;
+	width: 100%;
+	padding: 0 15px;
+	transition: $transition;
+
+	@include media("xs") {
+		font-size: 12px;
+		height: 40px;
+	}
+
+	&:focus {
+		border-color: $orange;
+
+		&::placeholder {
+			opacity: .4;
+		}
+	}
+}
+
+picture {
+	display: block;
+}
+
+select {
+	background-color: $white;
+	border: 1px solid $medium_gray;
+	border-radius: $radius;
+	color: $medium_gray;
+	font:inherit;
+	font-size: 16px;
+	height: 50px;
+	width: 100%;
+	padding: 0 15px;
+
+	@include media("xs") {
+		font-size: 12px;
+		height: 40px;
+	}
+}
+
+textarea {
+	background-color: $white;
+	border: 1px solid $medium_gray;
+	border-radius: $radius;
+	font:inherit;
+	font-size: 16px;
+	width: 100%;
+	padding: 15px;
+	resize: none;
+	transition: $transition;
+
+	@include media("xs") {
+		font-size: 12px;
+	}
+
+	&:focus {
+		border-color: $orange;
+
+		&::placeholder {
+			opacity: .4;
+		}
+	}
+}
+
+ul {
+	list-style-type: none;
+}
+
+.container {
+	width: 90%;
+	margin: auto;
+	max-width: 1150px;
+}
+
+.--btn {
+	align-items: center;
+	background-color: transparent;
+	border: 1px solid;
+	border-radius: $radius;
+	color: inherit;
+	cursor: pointer;
+	display: flex;
+	font: inherit;
+	gap: 15px;
+	height: 50px;
+	justify-content: center;
+	line-height: 1;
+	padding: 0 30px;
+	text-decoration: none;
+	transition: $transition;
+
+	@include media("xs") {
+		height: 40px;
+	}
+
+	&:hover {
+		background-color: $white;
+		color: $blue;
+	}
+
+	&.--orange {
+		background-color: $orange;
+		border-color: $orange;
+		color: $white;
+
+		&:hover {
+			background-color: transparent;
+			color: $orange;
+
+			> .icon {
+				stroke: $orange;
+			}
+		}
+	}
+
+	> .icon {
+		transition: $transition;
+	}
+}
+
+.menu--drop {
+	background-color: $orange;
+	border-bottom-right-radius: $radius;
+	border-top-right-radius: $radius;
+	color: $white;
+	left: 0;
+	opacity: 0;
+	padding: 30px;
+	position: fixed;
+	top: 0;
+	transform: translateX(-100%);
+	transition: $transition;
+	visibility: hidden;
+
+	&.--is-visible {
+		opacity: 1;
+		transform: translateX(0);
+		visibility: visible;
+	}
+
+	> .button {
+		&.--close-drop {
+			left: 100%;
+			margin: 15px;
+			position: absolute;
+			top: 0;
+		}
+	}
+
+	> .nav {
+		&.--drop-menu {
+			display: flex;
+			flex-direction: column;
+			gap: 30px;
+
+			> .nav--link {
+				text-decoration: none;
+			}
+		}
+	}
+}

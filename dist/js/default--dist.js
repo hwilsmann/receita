@@ -1,0 +1,1 @@
+const open=document.querySelector("[data--button-open]"),close=document.querySelector("[data--button-close]"),drop=document.querySelector("[data--drop]");open&&open.addEventListener("click",()=>{drop.classList.add("--is-visible")}),close&&close.addEventListener("click",()=>{drop.classList.remove("--is-visible")});

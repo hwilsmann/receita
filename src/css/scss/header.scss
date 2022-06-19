@@ -1,0 +1,99 @@
+@import 'variables';
+
+.header {
+  background-color: $blue;
+  color: $white;
+  padding: 30px 0;
+
+  > .container {
+    position: relative;
+
+    > .row {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      @include media("xs") {
+        align-items: center;
+      }
+
+      > .top {
+        align-items: center;
+        display: flex;
+        gap: 30px;
+        justify-content: space-between;
+
+        @include media("xs") {
+          align-items: flex-end;
+          flex-direction: column-reverse;
+          width: 100%;
+        }
+      }
+
+      > .bottom {
+        align-items: center;
+        display: flex;
+        gap: 120px;
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  .list--shortcuts {
+    align-items: center;
+    display: flex;
+    gap: 30px;
+
+    > .item {
+      display: flex;
+    }
+  }
+
+  .nav {
+    &.--header-menu {
+      display: flex;
+      gap: 30px;
+
+      @include media("xs") {
+        display: none;
+      }
+  
+      > .nav--link {
+        border-bottom: 4px solid transparent;
+        padding: 10px 20px;
+        text-decoration: none;
+        transition: $transition;
+  
+        &:hover,
+        &.--is-active {
+          border-color: $orange;
+        }
+      }
+    }
+  }
+
+  .button {
+    &.--hamburguer {
+      display: none;
+      left: 0;
+      position: absolute;
+      top: 15px;
+
+      @include media("xs") {
+        display: flex;
+      }
+    }
+  }
+
+  .link {
+    &.--logo {
+      @include media("xs") {
+        margin: auto;
+
+        > img {
+          max-width: 217px;
+        }
+      }
+    }
+  }
+}
