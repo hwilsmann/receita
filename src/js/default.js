@@ -10,3 +10,10 @@ if (open) open.addEventListener('click', () => {
 if (close) close.addEventListener('click', () => {
   drop.classList.remove('--is-visible');
 });
+
+//
+
+$("#chosen-1").chosen();
+$("#chosen-2").chosen();
+$("#chosen-3").chosen();
+$("#chosen-4").chosen();

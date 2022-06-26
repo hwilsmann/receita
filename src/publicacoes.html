@@ -55,28 +55,28 @@
 							<form class="form">
 								<input name="Pesquisa Livre" placeholder="Pesquisa Livre" type="text" required />
 
-								<select name="Atividades" required>
-									<option selected disabled>Atividades</option>
-
+								<select data-placeholder="Atividades" id="chosen-1" name="Atividades" multiple required>
 									<option value="Atividade 1">Atividade 1</option>
+									<option value="Atividade 2">Atividade 2</option>
+									<option value="Atividade 3">Atividade 3</option>
 								</select>
 
-								<select name="Áreas" required>
-									<option selected disabled>Áreas</option>
-
+								<select data-placeholder="Áreas" id="chosen-2" name="Áreas" multiple required>
 									<option value="Área 1">Área 1</option>
+									<option value="Área 2">Área 2</option>
+									<option value="Área 3">Área 3</option>
 								</select>
 
-								<select name="Setores" required>
-									<option selected disabled>Setores</option>
-
+								<select data-placeholder="Setores" id="chosen-3" name="Setores" multiple required>
 									<option value="Setor 1">Setor 1</option>
+									<option value="Setor 2">Setor 2</option>
+									<option value="Setor 3">Setor 3</option>
 								</select>
 
-								<select name="Tipo de Publicação" required>
-									<option selected disabled>Tipo de Publicação</option>
-
+								<select data-placeholder="Tipo de Publicação" id="chosen-4" name="Tipo de Publicação" multiple required>
 									<option value="Tipo 1">Tipo 1</option>
+									<option value="Tipo 2">Tipo 2</option>
+									<option value="Tipo 3">Tipo 3</option>
 								</select>
 
 								<button class="button --btn --orange" type="submit">
@@ -209,6 +209,7 @@
 				</nav>
 			</div>
 
+			<script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
 			<script src="./dist/js/default--dist.js" type="text/javascript"></script>
 		</body>
 	</html>
